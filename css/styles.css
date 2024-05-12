@@ -1,0 +1,88 @@
+@font-face{
+    font-family: 'PARISIAN';
+    src: url(../assets/PARISIAN.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    /* COLORS */
+
+    --gray-dark: #8B8B8B;
+    --gray-light: #C5C5C5;
+    --blue-dark: #80B9CE;
+    --blue-light: #B4C9D2;
+
+    /* FONTS */
+    --font-main: 'PARISIAN';
+}
+
+html{
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    font-weight: normal;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* ↓↓↓↓↓ COMPONENTS ↓↓↓↓↓ */
+
+/* burger start*/
+
+.burger{
+    height: 20px;
+    width: 24px;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger__line{
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--gray-dark);
+}
+
+.burger__line:first-child{
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.burger__line:nth-child(2){
+    transition: transform 0.2s ease-in-out;
+}
+
+.burger__line:last-child{
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.burger.burger-open .burger__line:first-child{
+    transform: rotate(45deg);
+    width: 27px;
+}
+
+.burger.burger-open .burger__line:nth-child(2){
+    transform: scaleY(0);
+}
+
+.burger.burger-open .burger__line:last-child{
+    transform: rotate(-45deg);
+    width: 27px;
+       
+}
+/* burger end*/
+
+/* ↑↑↑↑↑ COMPONENTS ↑↑↑↑↑ */
