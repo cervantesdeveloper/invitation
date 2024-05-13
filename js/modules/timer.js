@@ -16,6 +16,5 @@ export default function timer(daysId, hoursId, minutesId){
         d.querySelector(daysId).innerHTML = days;
         d.querySelector(hoursId).innerHTML = hours;
         d.querySelector(minutesId).innerHTML = minutes;
-        console.log(hours)
     }, 1000)
 }
