@@ -241,6 +241,7 @@ a{
 /* ↓↓↓↓↓ HERO ↓↓↓↓↓ */
 
 .hero{
+    z-index: 1;
     width: 100%;
     min-height: 100vh;
     background-image: url(../assets/backgroun-paper.jpg);
@@ -449,3 +450,100 @@ a{
 }
 
 /* ↑↑↑↑↑ TIMER ↑↑↑↑↑ */
+
+/* ↓↓↓↓↓ STORY ↓↓↓↓↓ */
+.story{
+    position: relative;
+    overflow: hidden;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(230,244,248,0) 50%);
+}
+.story .contained{
+    max-width: 45rem;
+}
+
+.story .contained:first-child{
+    padding: 1.875rem;
+    text-align: center;
+    background-image: url(../assets/backgroun-paper.jpg);
+    box-shadow: var(--box-shadow);
+    margin-top: 4.375rem;
+    margin-bottom: 4.375rem;
+}
+
+.story__hero{
+    width: 25%;
+    max-width: 5rem;
+    margin: 2rem auto;
+}
+
+.story__hero img{
+    width: 100%;
+    height: auto;
+}
+
+.story__text{
+    color: var(--gray-dark);
+    -webkit-text-stroke: .15px var(--gray-dark);
+    font-size: 1.125rem;
+}
+
+.story__text p{
+    margin-bottom: 2rem;
+}
+
+.story .contained:nth-child(2){
+    margin-bottom: 4.375rem;
+}
+
+.story__parents{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--blue-dark);
+    -webkit-text-stroke: .15px var(--blue-dark);
+    line-height: 1.5;
+}
+
+.story__parents:first-child{
+    margin-bottom: 2.25rem;
+}
+
+.story__flower-left,
+.story__flower-right{
+    position: absolute;
+    opacity: .4;
+    width: 210px;
+}
+
+.story__flower-left{
+    top: 50%;
+    left: 0;
+    transform: translateX(-50%) rotate(40deg);
+}
+
+.story__flower-right{
+    right: 0;
+    bottom: 2rem;
+    transform: translateX(70%) rotate(270deg);
+}
+
+@media (min-width: 1024px) {
+    .story{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(230,244,248,0) 30%);
+    }
+
+    .story > div{
+        width: 50%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .story .contained:nth-child(2){
+        margin-bottom: 0;
+    }
+}
+
+/* ↑↑↑↑↑ STORY ↑↑↑↑↑ */
