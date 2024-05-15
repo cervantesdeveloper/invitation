@@ -60,6 +60,7 @@ html{
     box-sizing: border-box;
     font-family: var(--font-main);
     font-weight: normal;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -72,6 +73,7 @@ html{
 
 body{
     background-color: var(--blue-light);
+    
 }
 
 a{
@@ -194,7 +196,7 @@ a{
 .menu__option a{
     text-align: center ;
     color: var(--gray-dark);
-    font-size: 2.625rem;
+    font-size: 1.5rem;
     -webkit-text-stroke: .15px var(--gray-dark);
 }
 
@@ -271,7 +273,7 @@ a{
     font-size: 2.375rem;
     line-height: 1.5;
     margin-bottom: 2rem;
-    
+    text-transform: uppercase;
 }
 
 .hero__date span{
@@ -402,12 +404,11 @@ a{
 
 .timer{
     text-align: center;
-    
 }
 
 .timer span{
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.125rem;
     color: var(--blue-dark);
     -webkit-text-stroke: .15px var(--blue-dark);
     margin-bottom: 1.5rem;
@@ -416,7 +417,7 @@ a{
 .timer__table{
     border: .5px solid var(--blue-dark);
     color: var(--gray-dark);
-    font-size: .75rem;
+    font-size: 1rem;
     max-width: 20rem;
     min-width: 6.25rem;
     line-height: 2;
@@ -557,7 +558,8 @@ a{
 /* ↓↓↓↓↓ WHEN ↓↓↓↓↓ */
 .when{
     background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(230,244,248,0) 50%);
-    
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
 }
 
 .when__contained{
@@ -648,7 +650,7 @@ a{
 
 @media (min-width: 1024px) {
     .when{
-        background: linear-gradient(180deg, rgba(255,255,255,1) 80%, rgba(230,244,248,0) 80%);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 75%, rgba(230,244,248,0) 75%);
     }
 
     .when__contained{
