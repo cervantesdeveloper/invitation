@@ -50,6 +50,15 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.no-opacity{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.no-opacity.fade-in{
+    opacity: 1;
+}
 /* container */
 
 /* ↑↑↑↑↑ UTILITIES ↑↑↑↑↑ */
@@ -602,13 +611,13 @@ a{
 
 .card__media{
     margin: 0 auto 2rem;
-    width: 3.25rem;
+    width: 3rem;
     
 }
 
 .card__media img{
-    height: 5.625rem;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 .card__title{
@@ -716,7 +725,7 @@ a{
 }
 
 .schedule__heading img{
-    width: 3rem;
+    height: 3rem;
     margin-bottom: 3rem;
 }
 
@@ -969,7 +978,16 @@ a{
     .confirm__gift{
         grid-column: 1 / 2;
         grid-row: 1 / 2;
+        display: flex;
+        flex-direction: column;
     }
+
+    .confirm__gift a{
+        min-width: 12rem;
+        margin-top: auto;
+    }
+
+   
 
     .resgister__confirmation{
         grid-column: 2 / 3;

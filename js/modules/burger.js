@@ -7,5 +7,4 @@ export default function burger(burger, menu){
             d.querySelector(menu).classList.toggle("menu-open")
         }
     })
-    console.log(`menu `)
 }
