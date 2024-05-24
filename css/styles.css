@@ -53,7 +53,7 @@
 
 .no-opacity{
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity .5s ease-in-out;
 }
 
 .no-opacity.fade-in{
@@ -243,6 +243,25 @@ a{
     font-size: 1.125rem;
     -webkit-text-stroke: .15px var(--gray-dark);
     color: var(--gray-dark);
+    transition: color .3s ease-in-out;
+}
+
+.nav__link::after{
+    content: " ";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: var(--blue-dark);
+    transition: width .3s ease-in-out;
+}
+
+.nav__link:hover{
+    color: var(--blue-dark);
+    -webkit-text-stroke: .15px var(--blue-dark);
+}
+
+.nav__link:hover::after{
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -368,6 +387,7 @@ a{
         grid-row: 1 / 2;
         justify-self: start;
         align-self: start;
+        text-align: left;
     }
 
     .hero__heading{
@@ -861,6 +881,7 @@ a{
 }
 
 .dressing__card h4{
+    color: var(--gray-dark);
     font-size: 1.125rem;
     -webkit-text-stroke: .15px var(--gray-dark);
     margin-bottom: 3rem;
